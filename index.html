@@ -33,7 +33,7 @@
         <p>Preencha os campos abaixo para salvar o paciente.</p>
       </div>
 
-      <form id="formPaciente">
+      <form id="formPaciente" novalidate>
         <div class="campo">
           <label for="nome">Nome Completo *</label>
           <input type="text" id="nome" placeholder="Ex: Maria dos Santos" required>
@@ -42,7 +42,7 @@
         <div class="linha-dupla">
           <div class="campo">
             <label for="cpf">CPF *</label>
-            <input type="text" id="cpf" placeholder="000.000.000-00" required>
+            <input type="text" id="cpf" placeholder="000.000.000-00" maxlength="14" required>
           </div>
 
           <div class="campo">
@@ -54,7 +54,7 @@
         <div class="linha-dupla">
           <div class="campo">
             <label for="telefone">Telefone / Contato *</label>
-            <input type="text" id="telefone" placeholder="(11) 99999-9999" required>
+            <input type="text" id="telefone" placeholder="(11) 99999-9999" maxlength="15" required>
           </div>
 
           <div class="campo">
@@ -103,7 +103,7 @@
 
   </main>
 
-  <!-- SCRIPT JAVASCRIPT SIMPLIFICADO -->
+  <!-- SCRIPT JAVASCRIPT VALIDADO -->
   <script src="app.js"></script>
 </body>
 </html>
