@@ -1,0 +1,429 @@
+﻿:root {
+    --azul-hospitalar: #0077B6;
+    --verde-agua: #2EC4B6;
+    --vermelho-vital: #E63946;
+    --cinza-clinico: #4A5568;
+    --azul-gelo: #EAF6FB;
+    --branco: #FFFFFF;
+    --borda-suave: #D2E6F0;
+    --sombra-card: 0 4px 12px rgba(0, 119, 182, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--azul-gelo);
+    color: var(--cinza-clinico);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, .slogan {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+}
+
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.topbar {
+    background-color: var(--branco);
+    border-bottom: 3px solid var(--azul-hospitalar);
+    padding: 14px 0;
+    box-shadow: var(--sombra-card);
+}
+
+.topbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.brand-area {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.main-logo {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+}
+
+.slogan {
+    color: var(--cinza-clinico);
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-left: 2px solid var(--verde-agua);
+    padding-left: 14px;
+}
+
+.hospital-badge {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+}
+
+.hospital-badge span {
+    color: var(--azul-hospitalar);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.hospital-badge small {
+    color: var(--cinza-clinico);
+    font-size: 0.78rem;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 24px;
+    padding-top: 28px;
+    padding-bottom: 40px;
+    flex: 1;
+}
+
+.card {
+    background-color: var(--branco);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: var(--sombra-card);
+    border: 1px solid var(--borda-suave);
+}
+
+.form-section h2 {
+    color: var(--azul-hospitalar);
+    font-size: 1.35rem;
+    margin-bottom: 4px;
+}
+
+.subtitle {
+    font-size: 0.85rem;
+    color: var(--cinza-clinico);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 14px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: var(--cinza-clinico);
+}
+
+.label-alert {
+    color: var(--vermelho-vital);
+    font-weight: 700;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1.5px solid var(--borda-suave);
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.92rem;
+    color: var(--cinza-clinico);
+    background-color: var(--branco);
+    transition: border-color 0.2s;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--azul-hospitalar);
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.btn {
+    padding: 11px 16px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.92rem;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.1s;
+}
+
+.btn:hover {
+    opacity: 0.92;
+}
+
+.btn:active {
+    transform: scale(0.99);
+}
+
+.btn-primary {
+    background-color: var(--azul-hospitalar);
+    color: var(--branco);
+    flex: 1;
+}
+
+.btn-secondary {
+    background-color: #E2E8F0;
+    color: var(--cinza-clinico);
+}
+
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.search-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.search-header h2 {
+    color: var(--azul-hospitalar);
+    font-size: 1.3rem;
+}
+
+.counter {
+    background-color: var(--azul-gelo);
+    color: var(--azul-hospitalar);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.search-controls {
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    gap: 12px;
+}
+
+.feedback-banner {
+    background-color: var(--verde-agua);
+    color: var(--branco);
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    font-size: 0.92rem;
+}
+
+.patients-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.patient-card {
+    background-color: var(--branco);
+    border-radius: 12px;
+    padding: 20px;
+    border-left: 5px solid var(--azul-hospitalar);
+    box-shadow: var(--sombra-card);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.patient-card.has-alert {
+    border-left-color: var(--vermelho-vital);
+}
+
+.patient-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.patient-title h3 {
+    color: var(--azul-hospitalar);
+    font-size: 1.15rem;
+}
+
+.patient-meta {
+    font-size: 0.85rem;
+    color: var(--cinza-clinico);
+}
+
+.status-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    background-color: rgba(46, 196, 182, 0.16);
+    color: #1D8A7E;
+}
+
+.status-badge.internado {
+    background-color: rgba(0, 119, 182, 0.14);
+    color: var(--azul-hospitalar);
+}
+
+.alert-box {
+    background-color: rgba(230, 57, 70, 0.1);
+    border: 1px solid var(--vermelho-vital);
+    color: var(--vermelho-vital);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    font-weight: 700;
+}
+
+.patient-info-block {
+    font-size: 0.9rem;
+    background-color: var(--azul-gelo);
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.patient-info-block p {
+    margin-bottom: 6px;
+}
+
+.patient-info-block p:last-child {
+    margin-bottom: 0;
+}
+
+.card-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    border-top: 1px solid var(--borda-suave);
+    padding-top: 12px;
+}
+
+.btn-sm {
+    padding: 7px 12px;
+    font-size: 0.82rem;
+    border-radius: 6px;
+}
+
+.btn-view {
+    background-color: var(--azul-gelo);
+    color: var(--azul-hospitalar);
+}
+
+.btn-edit {
+    background-color: rgba(46, 196, 182, 0.18);
+    color: #16796F;
+}
+
+.btn-archive {
+    background-color: rgba(230, 57, 70, 0.12);
+    color: var(--vermelho-vital);
+    margin-left: auto;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(74, 85, 104, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: var(--branco);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 600px;
+    padding: 24px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--borda-suave);
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+}
+
+.modal-header h3 {
+    color: var(--azul-hospitalar);
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    color: var(--cinza-clinico);
+    cursor: pointer;
+}
+
+.modal-body p {
+    margin-bottom: 10px;
+    font-size: 0.94rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.footer {
+    background-color: var(--branco);
+    border-top: 1px solid var(--borda-suave);
+    padding: 16px 0;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--cinza-clinico);
+}
+
+@media (max-width: 920px) {
+    .main-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hospital-badge {
+        text-align: left;
+    }
+}
+
+@media (max-width: 560px) {
+    .search-controls, .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-archive {
+        margin-left: 0;
+    }
+}
+
+.feedback-banner.error {
+    background-color: var(--vermelho-vital);
+    color: var(--branco);
+}
